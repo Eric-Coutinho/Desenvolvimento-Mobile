@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {View, Text} from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+function App(){
+  return(
+    <View style={{
+      flex: 1, padding: 30, backgroundColor: 'green'
+    }}>
+      <Text style={{
+        backgroundColor: 'black', color: 'red',fontSize: 30, textAlign:'center',
+        marginBottom: 50
+      }}>Poema</Text>
+      <Text style={{fontSize: 30}}>
+        <Text>Ò mar salgado...{'\n'}quanto do teu sal</Text>
+        <Text style={{fontFamily: 'Bernard MT Condensed'}}> são lágrimas de Portugal!{'\n'}</Text>
+        <Text style={{fontSize: 25, fontWeight:"bold"}}>Quantos filhos em vão rezaram!{'\n'}</Text>
+        <Text style={{fontSize: 20, fontStyle: 'italic'}}>Quantas noivas ficaram por casar?{'\n'}</Text>
+        <Text>Pra que fosse nosso,ò mar!{'\n'}</Text>
+        <Text>...{'\n'}</Text>
+        <Text>Valeu a pena?{'\n'}Tudo vale a pena{'\n'}</Text>
+        <Text>Se a alma não é pequena!</Text>
+      </Text>
+      <Text style={{
+        backgroundColor: 'black', color: 'red',fontSize: 30,
+        textAlign: 'center',marginTop:50, fontFamily:'Brush Script MT'
+      }}>Fernando Pessoa{'\n'}(1888-1935)</Text>
+
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
